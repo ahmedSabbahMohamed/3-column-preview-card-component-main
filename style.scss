@@ -1,0 +1,112 @@
+//fonts
+  @import url('https://fonts.googleapis.com/css2?family=Epilogue:wght@500;700&family=Lexend+Deca&family=Ubuntu:wght@400;500;700&display=swap');
+  @import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Epilogue:wght@500;700&family=Lexend+Deca&family=Ubuntu:wght@400;500;700&display=swap');
+
+
+//START GLOBAL RULES
+
+//RESET
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+//START STYLE ALL BUTTONS 
+.btn {
+    button {
+        background-color: white;
+        border: 1px solid white;
+        padding: 10px;
+        border-radius: 20px;
+        margin-top: 40px;
+        cursor: pointer;
+        &:hover {
+            background-color: transparent;
+            color: white;
+        }
+    }
+}
+//END STYLE ALL BUTTONS
+
+//STYLE ALL <P>
+p {
+    color: hsla(0, 0%, 100%, 0.75);
+    line-height: 1.5;
+    font-family: Lexend Deca;
+}
+
+//STYLE ALL <H1>
+h1 {
+    margin: 30px 0;
+    color: hsl(0, 0%, 95%);
+    font-family: Big Shoulders Display;
+}
+
+//END GLOBAL RULES
+
+//CENTERING .CONTAINER
+body {
+    height: 100vh;
+    display: grid;
+    place-items: center;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    flex-flow: row;
+    margin: 20px 0;
+    }
+    .sedans {
+        display: inline-block;
+        padding: 35px;
+        background-color: hsl(31, 77%, 52%);
+        border-radius: 10px 0 0 10px;
+        width: 300px;
+    }
+    .btn {
+        .sedans-btn {
+            color: hsl(31, 77%, 52%);
+        }
+    }
+    .suvs {
+        display: inline-block;
+        padding: 35px;
+        background-color: hsl(184, 100%, 22%);
+        width: 300px;
+    }
+    .btn {
+        .suvs-btn {
+            color: hsl(184, 100%, 22%);
+        }
+    }
+    .luxur {
+        display: inline-block;
+        padding: 35px;
+        background-color: hsl(179, 100%, 13%);
+        border-radius: 0 10px 10px 0;
+        width: 300px;
+    }
+    .btn {
+        .luxur-btn {
+            color: hsl(179, 100%, 13%);
+        }
+    }
+
+    //screens less than 950px 
+
+    @media (max-width: 950px) {
+        .container {
+            flex-direction: column;
+        }
+        .sedans {
+            border-radius: 10px 10px 0 0;
+        }
+        .luxur {
+            border-radius: 0 0 10px 10px;
+        }
+      }
+
