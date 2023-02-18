@@ -5,90 +5,72 @@
   padding: 0;
   box-sizing: border-box;
   -moz-box-sizing: border-box;
-  font-family: sans-serif;
-}
-
-.btn button {
-  background-color: white;
-  border: 1px solid white;
-  padding: 10px;
-  border-radius: 20px;
-  margin-top: 40px;
-  cursor: pointer;
-}
-.btn button:hover {
-  background-color: transparent;
-  color: white;
-}
-
-p {
-  color: hsla(0deg, 0%, 100%, 0.75);
-  line-height: 1.5;
-  font-family: Lexend Deca;
-}
-
-h1 {
-  margin: 30px 0;
-  color: hsl(0deg, 0%, 95%);
-  font-family: Big Shoulders Display;
 }
 
 body {
-  height: 100vh;
+  min-height: 100vh;
   display: grid;
   place-items: center;
 }
 
 .container {
   display: flex;
-  justify-content: center;
-  flex-flow: row;
-  margin: 20px 0;
+  flex-direction: row;
+  overflow: hidden;
+  border-radius: 10px;
 }
-
-.sedans {
-  display: inline-block;
-  padding: 35px;
-  background-color: hsl(31deg, 77%, 52%);
-  border-radius: 10px 0 0 10px;
+.container .card {
   width: 300px;
+  padding: 30px;
+  position: relative;
 }
-
-.btn .sedans-btn {
+.container .card h1 {
+  font-family: Big Shoulders Display, sans-serif;
+  padding: 20px 0;
+  color: hsla(0deg, 0%, 100%, 0.75);
+}
+.container .card p {
+  line-height: 1.5;
+  font-family: Lexend Deca, sans-serif;
+  color: hsla(0deg, 0%, 100%, 0.75);
+  font-size: 16px;
+  padding-bottom: 100px;
+}
+.container .card:nth-child(1) {
+  background-color: hsl(31deg, 77%, 52%);
+}
+.container .card:nth-child(1) button {
   color: hsl(31deg, 77%, 52%);
 }
-
-.suvs {
-  display: inline-block;
-  padding: 35px;
+.container .card:nth-child(2) {
   background-color: hsl(184deg, 100%, 22%);
-  width: 300px;
 }
-
-.btn .suvs-btn {
+.container .card:nth-child(2) button {
   color: hsl(184deg, 100%, 22%);
 }
-
-.luxur {
-  display: inline-block;
-  padding: 35px;
+.container .card:nth-child(3) {
   background-color: hsl(179deg, 100%, 13%);
-  border-radius: 0 10px 10px 0;
-  width: 300px;
 }
-
-.btn .luxur-btn {
+.container .card:nth-child(3) button {
   color: hsl(179deg, 100%, 13%);
+}
+.container .card button {
+  position: absolute;
+  bottom: 30px;
+  border: 1px solid hsla(0deg, 0%, 100%, 0.75);
+  padding: 10px 15px;
+  background-color: hsla(0deg, 0%, 100%, 0.75);
+  border-radius: 25px;
+  cursor: pointer;
+}
+.container .card button:hover {
+  background-color: transparent;
+  color: hsla(0deg, 0%, 100%, 0.75);
 }
 
 @media (max-width: 950px) {
   .container {
     flex-direction: column;
-  }
-  .sedans {
-    border-radius: 10px 10px 0 0;
-  }
-  .luxur {
-    border-radius: 0 0 10px 10px;
+    margin: 20px 0;
   }
 }/*# sourceMappingURL=style.css.map */
